@@ -1,0 +1,22 @@
+<div class="container">
+  <div><h2>Gestión Viajes</h2></div>
+<table  border="solid" >
+  <thead>
+      <th>Identificador</th>
+      <th>Fecha</th>
+      <th>Conductor</th>
+      <th>Vehiculo</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let trip of trips">
+          <td>{{trip.idTrip}}</td>
+          <td>{{trip.tripDate}}</td>
+          <td>{{trip.idDriver.name}} {{trip.idDriver.surname}}</td>
+          <td>{{trip.idVehicle.brand}} - {{trip.idVehicle.model}} - {{trip.idVehicle.plate}} - {{trip.idVehicle.licenseRequired}}</td>
+      </tr>
+  </tbody>
+</table>
+
+<button mat-raised-button color="primary" (click)="createTrip()" style="margin: 10px">Nuevo Viaje</button>
+<button mat-raised-button color="accent" routerLink="/" routerLinkActive="active">Regresar</button>
+</div>

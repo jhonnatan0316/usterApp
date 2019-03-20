@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    <h2>Formulario Vehículo</h2>
+  </div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Identificador Vehículo" disabled [(ngModel)]="vehicle.idVehicle" name="idVehicle">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Marca" [(ngModel)]="vehicle.brand" name="brand">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Modelo" [(ngModel)]="vehicle.model" name="model">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Placa" [(ngModel)]="vehicle.plate" name="plate">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Tipo Licencia Requerida" [(ngModel)]="vehicle.licenseRequired"
+        name="licenseRequired"  minlength="1" maxlength="1">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="handleForm()" style="margin: 10px">Guardar</button>
+  <button mat-raised-button color="accent" routerLink="/vehicle" routerLinkActive="active">Regresar</button>
+</div>

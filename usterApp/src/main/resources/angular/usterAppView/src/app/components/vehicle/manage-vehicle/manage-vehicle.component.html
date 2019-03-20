@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <h2>Gestión Vehículos</h2>
+    </div>
+    <table border="solid">
+        <thead>
+            <th>Identificador</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Placa</th>
+            <th>Tipo Licencia Requerida</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vehicle of vehicles">
+                <td align="center">{{vehicle.idVehicle}}</td>
+                <td align="center">{{vehicle.brand}}</td>
+                <td align="center">{{vehicle.model}}</td>
+                <td align="center">{{vehicle.plate}}</td>
+                <td align="center">{{vehicle.licenseRequired}}</td>
+                <td><button mat-raised-button color="basic" (click)="updateVehicle(vehicle)" style="margin: 10px">Editar
+                        Vehículo</button>
+                    <button mat-raised-button color="warn" (click)="deleteVehicle(vehicle)"
+                        style="margin: 10px">Eliminar
+                        Vehículo</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button mat-raised-button color="primary" (click)="createVehicle()" style="margin: 10px">Nuevo Vehículo</button>
+    <button mat-raised-button color="accent" routerLink="/" routerLinkActive="active">Regresar</button>
+
+</div>

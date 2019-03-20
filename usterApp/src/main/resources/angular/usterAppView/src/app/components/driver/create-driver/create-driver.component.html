@@ -1,0 +1,24 @@
+<div class="container">
+  <div>
+    <h2>Formulario Conductores</h2>
+  </div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Identificador Conductor" disabled [(ngModel)]="driver.idDriver" name="idDriver">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Nombre" [(ngModel)]="driver.name" name="nombre">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Apellido" [(ngModel)]="driver.surname" name="surname">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Tipo Licencia" [(ngModel)]="driver.license" name="license" minlength="1" maxlength="1">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="handleForm()" style="margin: 10px">Guardar</button>
+  <button mat-raised-button color="accent" routerLink="/driver" routerLinkActive="active">Regresar</button>
+</div>

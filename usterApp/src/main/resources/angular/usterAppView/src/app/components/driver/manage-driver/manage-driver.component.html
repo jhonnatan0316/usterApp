@@ -1,0 +1,24 @@
+<div class="container">
+  <div><h2>Gestión Conductores</h2></div>
+<table  border="solid" >
+  <thead>
+      <th>Identificador</th>
+      <th>Nombre</th>
+      <th>Licencia</th>
+      <th>Acciones</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let driver of drivers">
+          <td>{{driver.idDriver}}</td>
+          <td>{{driver.name}} {{driver.surname}}</td>
+          <td>{{driver.license}}</td>
+          <td><button mat-raised-button color="basic" (click)="updateDriver(driver)" style="margin: 10px">Editar
+                  Conductor</button>
+              <button mat-raised-button color="warn" (click)="deleteDriver(driver)" style="margin: 10px">Eliminar
+                  Conductor</button></td>
+      </tr>
+  </tbody>
+</table>
+<button mat-raised-button color="primary" (click)="createDriver()" style="margin: 10px">Nuevo Conductor</button>
+<button mat-raised-button color="accent" routerLink="/" routerLinkActive="active" >Regresar</button>
+</div>

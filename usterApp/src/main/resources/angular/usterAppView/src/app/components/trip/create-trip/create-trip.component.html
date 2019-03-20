@@ -1,0 +1,36 @@
+
+ <div class="container">
+  <div><h2>Formulario Viaje</h2></div>
+  <form  class="example-form">
+    <div class="form group">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Fecha del viaje" [formControl]="tripDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>   
+    </div>    
+    <div class="form group">
+      <mat-form-field>
+        <mat-label>Seleccione Vehiculo</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.idVehicle" (click)="onChangeVehicles(vehicle)">
+            Marca: {{vehicle.brand}} - Modelo {{vehicle.model}} - Licencia Requerida {{vehicle.licenseRequired}} 
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form group">
+      <mat-form-field>
+        <mat-label>Seleccione Conductor</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let driver of drivers" [value]="driver.idDriver" (click)="onChangeDrivers(driver)">
+            Nomre: {{driver.name}} {{driver.surname}} - Licencia Tipo {{driver.license}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="handleForm()" style="margin: 10px">Guardar</button>
+    <button mat-raised-button color="accent" routerLink="/trip" routerLinkActive="active">Regresar</button>
+
+  </form>
+</div>
