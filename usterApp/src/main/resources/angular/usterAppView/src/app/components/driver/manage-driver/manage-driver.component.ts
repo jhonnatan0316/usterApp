@@ -33,7 +33,6 @@ export class ManageDriverComponent implements OnInit {
             { field: 'surname', header: 'Apellido' },
             { field: 'license', header: 'Licencia' }
           ];
-          console.log(this.drivers);
         }
       },
       (error) => {

@@ -31,7 +31,6 @@ export class ManageTripComponent implements OnInit {
             { field: 'tripDate', header: 'Marca' },
             { field: 'trip.driver', header: 'Modelo' },
             { field: 'trip.vehicle', header: 'Placa' }];
-          console.log(this.trips);
         }
       },
       (error) => {
@@ -52,7 +51,7 @@ export class ManageTripComponent implements OnInit {
       this.trips.splice(this.trips.indexOf(trip), 1);
       this.openSnackBar('Eliminación exitosa', 'Cerrar');
     }, (error) => {
-      console.log(error as any);
+      this.openSnackBar('Error inesperado, favor comuniquese con el administrador', 'Cerrar');
     });
   }
 
