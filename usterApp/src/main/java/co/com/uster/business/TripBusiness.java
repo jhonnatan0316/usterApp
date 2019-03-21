@@ -95,11 +95,7 @@ public class TripBusiness {
 	public List<Vehicle> getAvailableVehicles(String tripDate) throws UsterException {
 		List<Vehicle> vehiclesAvailables = new ArrayList<>();
 		try {
-			System.out.println("----------Ingreso business getAvailableVehicles: " + tripDate);
-
 			Date selectedDate = convertToDate(tripDate);
-			System.out.println("Ingreso business transform : " + selectedDate);
-
 			List<Vehicle> vehicles = vehicleBus.getVehicles();
 			if (vehicles != null && !vehicles.isEmpty()) {
 				List<Trip> trips = tripRep.getTrips(selectedDate);
@@ -131,9 +127,6 @@ public class TripBusiness {
 	 * @return List<Driver>
 	 */
 	public List<Driver> getAvailableDrivers(String tripDate, String licenceType) throws UsterException {
-
-		System.out.println("----------Ingreso business getAvailableDrivers: " + tripDate + licenceType);
-
 		List<Driver> driversAvailables = new ArrayList<>();
 		try {
 			Date selectedDate = convertToDate(tripDate);

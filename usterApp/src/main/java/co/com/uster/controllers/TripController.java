@@ -99,9 +99,6 @@ public class TripController {
 	 * @return List<Vehicle>
 	 * @throws UsterException
 	 */
-
-	// @GetMapping("/getvehicles/{tripDate}")
-	// @PostMapping("/getvehicles")
 	@PostMapping("/getvehicles")
 	public List<Vehicle> getAvailableVehicles(@RequestBody String tripDate) throws UsterException {
 		List<Vehicle> vehicles = new ArrayList<Vehicle>();
@@ -121,10 +118,9 @@ public class TripController {
 	 * @return List<Driver>
 	 * @throws UsterException
 	 */
-	@PostMapping(value = "/getdrivers", consumes = "application/json", produces = "application/json")
+	@PostMapping("/getdrivers")
 	public List<Driver> getAvailableDrivers(@RequestBody DataRequestDTO dataRequestDTO) throws UsterException {
-		System.out.println("Ingreso al metodo getAvailableDrivers : " + dataRequestDTO.getTripDate()
-				+ dataRequestDTO.getLicenceType());
+		
 		List<Driver> drivers = new ArrayList<Driver>();
 		try {
 

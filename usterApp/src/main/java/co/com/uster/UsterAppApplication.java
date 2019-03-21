@@ -30,6 +30,9 @@ public class UsterAppApplication implements CommandLineRunner {
 		SpringApplication.run(UsterAppApplication.class, args);
 	}
 
+	/**
+	 * Datos iniciales de carga
+	 */
 	@Override
 	public void run(String... args) throws Exception {
 		// Se crean vehiculos iniciales en la base de datos H2

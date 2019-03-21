@@ -27,7 +27,6 @@ export class CreateDriverComponent implements OnInit {
     this.driver.license = this.driver.license.toUpperCase();
     if (this.driver.idDriver === undefined || this.driver.idDriver === null) {
       this.driverSrv.createDriver(this.driver).subscribe((driver) => {
-        console.log(driver);
         this.router.navigate(['/driver']);
         this.openSnackBar('Creación exitosa', 'Cerrar');
       }, (error) => {
@@ -35,7 +34,6 @@ export class CreateDriverComponent implements OnInit {
       });
     } else {
       this.driverSrv.updateDriver(this.driver).subscribe((driver) => {
-        console.log(driver);
         this.router.navigate(['/driver']);
         this.openSnackBar('Actualizacón exitosa', 'Cerrar');
       }, (error) => {

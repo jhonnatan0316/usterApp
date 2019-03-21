@@ -43,12 +43,10 @@ export class TripService {
   }
 
   getAvailableVehicles(tripDate: string): Observable<any> {
-    console.log('Se enviara la fecha: ' + tripDate);
     return this.http.post(this.baseUrl + 'trip/' + 'getvehicles', tripDate);
   }
 
   getAvailableDrivers(tripDate: string, licenceType: string): Observable<any> {
-    console.log('Se enviara la fecha: ' + tripDate + ' Lic ' + licenceType);
     const  parameters: DataRequest = {
       tripDate,
       licenceType

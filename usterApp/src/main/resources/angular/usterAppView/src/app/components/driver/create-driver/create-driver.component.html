@@ -8,15 +8,15 @@
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Nombre" [(ngModel)]="driver.name" name="nombre">
+      <input matInput placeholder="Nombre" required [(ngModel)]="driver.name" name="nombre">
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Apellido" [(ngModel)]="driver.surname" name="surname">
+      <input matInput placeholder="Apellido" required [(ngModel)]="driver.surname" name="surname">
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Tipo Licencia" [(ngModel)]="driver.license" name="license" minlength="1" maxlength="1">
+      <input matInput placeholder="Tipo Licencia" required [(ngModel)]="driver.license" name="license" minlength="1" maxlength="1">
     </mat-form-field>
   </form>
   <button mat-raised-button color="primary" (click)="handleForm()" style="margin: 10px">Guardar</button>
