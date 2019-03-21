@@ -1,5 +1,7 @@
 # usterApp
-Desarrollo App de reservas para vehículos con tecnologías Spring Boot, Jpa, Hibernate, Rest, Angular.
+Desarrollo App que gestione la reserva de vehículos por parte de los clientes, cuenta conlas siguientes funcionalidades:
+### CRUD vehiculos, conductores 
+### CRUD Listado y gestion de viajes (Reglas de negocio) 
 
 ## Tecnologias BackEnd
 
